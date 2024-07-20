@@ -25,10 +25,8 @@ class PostSerializer(AuthorMixinForSerializer):
         model = Post
 
 
-class CommentSerializer(serializers.ModelSerializer):
-    author = serializers.SlugRelatedField(
-        read_only=True, slug_field='username'
-    )
+class CommentSerializer(AuthorMixinForSerializer):
+    """Сериализатор модели комментариев."""
 
     class Meta:
         fields = '__all__'
