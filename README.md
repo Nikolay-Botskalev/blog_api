@@ -11,7 +11,7 @@
 1. Клонирование репозитория
     В рабочей папке выполнить команду:
     ```
-    git_clone https://github.com/Nikolay-Botskalev/api_final_yatube
+    git_clone https://github.com/Nikolay-Botskalev/blog_api
     ```
 2. Создание виртуального окружения
     ```
