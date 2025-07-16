@@ -65,7 +65,7 @@
         }
     ]
 
-3. Создание публикации (POST-запрос)
+2. Создание публикации (POST-запрос)
 
     http://127.0.0.1:8000/api/v1/posts/
 
@@ -79,7 +79,7 @@
     "group": 1
     }
 
-5. Запрос комментариев к посту (GET-запрос)
+3. Запрос комментариев к посту (GET-запрос)
    
     http://127.0.0.1:8000/api/v1/posts/14/comments/
 
@@ -92,41 +92,42 @@
     "post": 14
     }
 
-7. Добавление комментария (POST-запрос)
+4. Добавление комментария (POST-запрос)
 
     http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/
+
     Пример запроса:
     {
     "text": "Текст комментария"
     }
 
-9. Запрос информации о группе
+5. Запрос информации о группе
 
-http://127.0.0.1:8000/api/v1/groups/1/
+    http://127.0.0.1:8000/api/v1/groups/1/
 
-Ответ:
-{
-    "id": 1,
-    "title": "TestGroup",
-    "slug": "test-group",
-    "description": "Описание группы."
-}
-
-11. Запрос информации о подписках
-
-http://127.0.0.1:8000/api/v1/follow/
-
-Ответ:
-[
+    Ответ:
     {
-        "user": "regular_user",
-        "following": "root"
-    },
-    {
-        "user": "regular_user",
-        "following": "second_user"
+        "id": 1,
+        "title": "TestGroup",
+        "slug": "test-group",
+        "description": "Описание группы."
     }
-]
+
+6. Запрос информации о подписках
+
+    http://127.0.0.1:8000/api/v1/follow/
+
+    Ответ:
+    [
+        {
+            "user": "regular_user",
+            "following": "root"
+        },
+        {
+            "user": "regular_user",
+            "following": "second_user"
+        }
+    ]
 
 ## Заполенение .env файла.
 
