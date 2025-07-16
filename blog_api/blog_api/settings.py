@@ -1,12 +1,17 @@
 from pathlib import Path
 
+import os
 from datetime import timedelta
+
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'hhz7l-ltdismtf@bzyz+rple7*s*w$jak%whj@(@u0eok^f9k4'
-
-DEBUG = True
+SECRET_KEY = os.getenv('SECRET')
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['*']
 
@@ -34,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'yatube_api.urls'
+ROOT_URLCONF = 'blog_api.urls'
 
 TEMPLATES_DIR = BASE_DIR / 'templates'
 
@@ -54,7 +59,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'yatube_api.wsgi.application'
+WSGI_APPLICATION = 'blog_api.wsgi.application'
 
 
 DATABASES = {
