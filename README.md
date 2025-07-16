@@ -1,35 +1,49 @@
 # blog_api
 
 ## Описание
+
     Проект blog_api представляет собой API платформу для людей, ведущих свои блоги. 
     Функционал:
     Возможность регистрации, создание записей, просмотр записей других пользователей, комментирование записей и подписка на других пользователей.
-
-     Обмен данными осуществляется через API.
+    Обмен данными осуществляется через API.
 
 
 ## Запуск проекта
 1. Клонирование репозитория
     В рабочей папке выполнить команду:
-    >> git_clone https://github.com/Nikolay-Botskalev/api_final_yatube
+    ```
+    git_clone https://github.com/Nikolay-Botskalev/api_final_yatube
+    ```
 2. Создание виртуального окружения
-    >> python -m venv venv
+    ```
+    python -m venv venv
+    ```
 3. Активация виартуального окружения
-    >> source venv/scripts/activate
+    ```
+    source venv/scripts/activate
+    ```
 4. Установка зависимостей
-    >> pip install -r requirements.txt
+    ```
+    pip install -r requirements.txt
+    ```
 5. Выполнение миграций
     Перейти в директорию с файлом manage.py:
-    >> cd blog_api
+    ```
+    cd blog_api
+    ```
     Выполнить команду:
-    >> python manage.py migrate
+    ```
+    python manage.py migrate
+    ```
 6. Запуск сервера
-    >> python manage.py runserver
+    ```
+    python manage.py runserver
+    ```
 Готово
 
 ## Примеры некоторых запросов.
 1. Запрос списка публикаций (GET-запрос)
-    >> http://127.0.0.1:8000/api/v1/posts/
+    http://127.0.0.1:8000/api/v1/posts/
     Ответ:
     [
         {
@@ -50,7 +64,7 @@
         }
     ]
 2. Создание публикации (POST-запрос)
-    >> http://127.0.0.1:8000/api/v1/posts/
+    http://127.0.0.1:8000/api/v1/posts/
     Пример запроса:
     {
     "id": 2,
@@ -61,7 +75,7 @@
     "group": 1
     }
 3. Запрос комментариев к посту (GET-запрос)
-    >> http://127.0.0.1:8000/api/v1/posts/14/comments/
+    http://127.0.0.1:8000/api/v1/posts/14/comments/
     Ответ:
     {
     "id": 1,
@@ -71,13 +85,13 @@
     "post": 14
     }
 4. Добавление комментария (POST-запрос)
-    >> http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/
+    http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/
     Пример запроса:
     {
     "text": "Текст комментария"
     }
 5. Запрос информации о группе
-    >> http://127.0.0.1:8000/api/v1/groups/1/
+    http://127.0.0.1:8000/api/v1/groups/1/
     Ответ:
     {
     "id": 1,
@@ -86,7 +100,7 @@
     "description": "Описание группы."
     }
 6. Запрос информации о подписках
-    >> http://127.0.0.1:8000/api/v1/follow/
+    http://127.0.0.1:8000/api/v1/follow/
     Ответ:
     [
         {
